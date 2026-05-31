@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f4f4;
+}
+
+.traffic-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.traffic-light{
+    width:120px;
+    background:black;
+    padding:20px;
+    border-radius:10px;
+}
+
+.light{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin:15px auto;
+}
+
+.red{
+    background:red;
+    animation:blink-red 6s infinite;
+}
+
+.yellow{
+    background:yellow;
+    animation:blink-yellow 6s infinite;
+}
+
+.green{
+    background:green;
+    animation:blink-green 6s infinite;
+}
+
+.stand{
+    width:20px;
+    height:200px;
+    background:black;
+}
+
+@keyframes blink-red{
+    0%,30%{
+        opacity:1;
+    }
+    31%,100%{
+        opacity:0.3;
+    }
+}
+
+@keyframes blink-yellow{
+    0%,30%{
+        opacity:0.3;
+    }
+    31%,60%{
+        opacity:1;
+    }
+    61%,100%{
+        opacity:0.3;
+    }
+}
+
+@keyframes blink-green{
+    0%,60%{
+        opacity:0.3;
+    }
+    61%,100%{
+        opacity:1;
+    }
+}
